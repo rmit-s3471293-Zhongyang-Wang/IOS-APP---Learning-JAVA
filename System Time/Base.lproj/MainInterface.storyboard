@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="System_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning From Last Time :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="0.0" y="0.0" width="152" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71s-sx-Lff">
+                                <rect key="frame" x="160" y="1" width="80" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="t8u-bT-0sI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYO-eX-M2a">
+                                <rect key="frame" x="248" y="1" width="63" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="WIc-D1-jbq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <state key="normal" title="Go !">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="BV7-eV-XEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="71s-sx-Lff" firstAttribute="bottom" secondItem="iYO-eX-M2a" secondAttribute="bottom" id="Fan-bZ-HNu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="71s-sx-Lff" secondAttribute="bottom" constant="-1" id="LzC-9X-p6u"/>
+                            <constraint firstItem="iYO-eX-M2a" firstAttribute="leading" secondItem="71s-sx-Lff" secondAttribute="trailing" constant="8" symbolic="YES" id="PFw-CG-IUT"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="PhQ-ax-74A"/>
+                            <constraint firstItem="71s-sx-Lff" firstAttribute="top" secondItem="iYO-eX-M2a" secondAttribute="top" id="Pxy-QI-5uH"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="bottom" secondItem="FKl-LY-JtV" secondAttribute="top" id="bSf-eZ-Loy"/>
+                            <constraint firstItem="71s-sx-Lff" firstAttribute="leading" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="8" symbolic="YES" id="bZf-1a-y9E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iYO-eX-M2a" secondAttribute="trailing" constant="-7" id="jeZ-Zv-Cyz"/>
+                            <constraint firstItem="71s-sx-Lff" firstAttribute="firstBaseline" secondItem="GcN-lo-r42" secondAttribute="firstBaseline" id="rMM-b9-WNQ"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="x2r-Tq-WSe"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="50"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="71s-sx-Lff" id="9kw-FO-ku7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="284"/>
+        </scene>
+    </scenes>
+</document>
